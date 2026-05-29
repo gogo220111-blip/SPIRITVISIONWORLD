@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPIRITVISIONWORLD Odds</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo-dot">SV</div>
+      <div>
+        <h1>SPIRITVISIONWORLD</h1>
+        <p>Official & World Winning Odds</p>
+      </div>
+    </div>
+    <a class="admin-link" href="admin/">Admin Panel</a>
+  </header>
+
+  <main class="page">
+    <section class="hero-card">
+      <div>
+        <h2>Winning Odds</h2>
+        <p>Click a country to see artist, song, release date and history.</p>
+      </div>
+      <div class="legend">
+        <span><b class="mini good"></b> Better</span>
+        <span><b class="mini bad"></b> Worse</span>
+        <span><b class="arrow-up">▲</b> Rank up</span>
+        <span><b class="arrow-down">▼</b> Rank down</span>
+      </div>
+    </section>
+
+    <section class="odds-card">
+      <div class="table-wrap">
+        <table class="odds-table">
+          <thead>
+            <tr>
+              <th class="rank-head">#</th>
+              <th>Country</th>
+              <th>Winning Chance</th>
+              <th><span class="bookmaker official">OFFICIAL</span></th>
+              <th><span class="bookmaker world">WORLD</span></th>
+              <th>History</th>
+            </tr>
+          </thead>
+          <tbody id="oddsBody"></tbody>
+        </table>
+      </div>
+      <p class="updated" id="lastUpdated"></p>
+    </section>
+  </main>
+
+  <div class="modal" id="countryModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <article class="modal-box">
+      <button class="modal-close" data-close="true">×</button>
+      <div class="modal-title">
+        <img id="modalFlag" class="flag large" alt="Flag" />
+        <div>
+          <h2 id="modalCountry"></h2>
+          <p id="modalStatus"></p>
+        </div>
+      </div>
+      <div class="details-grid">
+        <div><span>Artist</span><strong id="modalArtist"></strong></div>
+        <div><span>Song</span><strong id="modalSong"></strong></div>
+        <div><span>Release Date</span><strong id="modalRelease"></strong></div>
+        <div><span>Current Rank</span><strong id="modalRank"></strong></div>
+      </div>
+      <div class="history-box">
+        <span>History</span>
+        <p id="modalHistory"></p>
+      </div>
+    </article>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
